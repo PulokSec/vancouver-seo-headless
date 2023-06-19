@@ -23,7 +23,7 @@ module.exports =  withFaust ({
         headers: [
           {
             key: "Cache-Control",
-            value: "public, max-age=9999999999, must-revalidate",
+            value: "public, max-age=31536000, must-revalidate",
           },
         ],
       },
