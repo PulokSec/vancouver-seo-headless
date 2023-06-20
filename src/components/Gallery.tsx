@@ -83,7 +83,7 @@ const Gallery = (props: MyProps) => {
                         style={{width:"100%"}}
                       />
                     )}
-
+                    <div style={{height: "20px"}}></div>
                     {image?.HomeLandingPage?.gallery?.galleryImage2 == null ? "" : (
                       <Image
                         src={image?.HomeLandingPage?.gallery?.galleryImage2?.sourceUrl}
@@ -96,7 +96,7 @@ const Gallery = (props: MyProps) => {
                     )}
 
                   </Col>
-                  <Col>
+                  <Col style={{display: "flex", alignItems: "center"}}>
                     {image?.HomeLandingPage?.gallery?.galleryImage3 == null ? "" : (
                       <Image
                         src={image?.HomeLandingPage?.gallery?.galleryImage3?.sourceUrl}
@@ -118,7 +118,7 @@ const Gallery = (props: MyProps) => {
                         width="380"
                         style={{width:"100%"}} />
                     )}
-
+                    <div style={{height: "20px"}}></div>
                     {image?.HomeLandingPage?.gallery?.galleryImage5 == null ? "" : (
                       <Image
                         src={image?.HomeLandingPage?.gallery?.galleryImage5?.sourceUrl}

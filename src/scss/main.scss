@@ -657,6 +657,7 @@ footer {
 }
 
 .gallery_section {
+  margin-top: 50px;
   img {
     transition-duration: 0.3s;
     &:hover {
@@ -2104,7 +2105,9 @@ q.review-content {
 }
 
 @media all and (max-width: 441px) {
-
+  .split_image{
+    height:500px;
+  }
   .cta_section .cta_first{
     max-height: 50vh
   }

@@ -248,7 +248,7 @@ const News = (props: MyProps) => {
                               loader={myLoader}
                               src={item?.featuredImage?.node?.sourceUrl}
                               height="269"
-                              width="370"s
+                              width="370"
                               style={{width:"100%"}}
                               alt={item?.featuredImage?.node?.altText}
                             />

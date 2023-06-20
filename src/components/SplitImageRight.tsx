@@ -68,9 +68,8 @@ const SplitImageRight = (props: MyProps) => {
                             ?.splitImage?.sourceUrl
                         }
                         loader={myLoader}
-                        width="390"
+                        width="380"
                         height="500"
-                        priority={true}
                         style={{width:"100%",height:"100%"}}
                         alt={
                           splitImage?.HomeLandingPage?.splitImageRightSection
