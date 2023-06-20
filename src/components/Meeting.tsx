@@ -91,7 +91,6 @@ const Meeting = (props: MyProps) => {
                           }
                           fill
                           sizes="(max-width: 768px) 100vw"
-                          priority={true}
                           alt={
                             meeting?.HomeLandingPage?.meetingSection
                               ?.meetingImage?.altText

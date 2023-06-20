@@ -129,7 +129,6 @@ const PartnerLogo = (props: MyProps) => {
                             width="100"
                             height="100"
                             style={{width:"100%",height:"100%"}}
-                            priority={true}
                             alt={singleLogo.altText}
                           />
                         </div>

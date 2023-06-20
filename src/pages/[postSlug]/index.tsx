@@ -13,8 +13,6 @@ export interface PostProps {
 }
 
 export function PostComponent({ post }: PostProps) {
-  const { useQuery } = client;
-  const generalSettings = useQuery().generalSettings;
   const [metaData, setMetaData] = useState([]);
 
   useEffect(() => {
@@ -47,7 +45,7 @@ export function PostComponent({ post }: PostProps) {
       .then((result) => setMetaData(result?.data?.posts?.nodes));
 
   }, [post]);
-
+console.log(metaData);
   return (
     <>
       <Head>
@@ -74,7 +72,7 @@ export function PostComponent({ post }: PostProps) {
       <main className="content content-single">
         <div className="wrap">
           <h1>{post?.title()}</h1>
-          <span className='asim-post-meta' >By Cansoft | <Moment format="MMM D, YYYY" >{post.date}</Moment></span>
+          <span className='asim-post-meta' >By Vancouver SEO Services | <Moment format="MMM D, YYYY" >{post.date}</Moment></span>
           <div dangerouslySetInnerHTML={{ __html: post?.content() ?? '' }} />
         </div>
       </main>

@@ -69,7 +69,6 @@ const WeHelp = (props: MyProps) => {
                           loader={myLoader}
                           width="380"
                           height="500"
-                          priority={true}
                           style={{width:"100%",height:"100%"}}
                           alt={
                             help?.HomeLandingPage?.weHelpSection?.helpImage

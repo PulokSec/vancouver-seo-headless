@@ -1,8 +1,6 @@
-import React from "react";
-import { Accordion, Container } from "react-bootstrap";
 import { gql } from "@apollo/client";
-import { ApolloClient, InMemoryCache } from "@apollo/client";
 import { client } from "lib/apollo";
+import { Accordion, Container } from "react-bootstrap";
 
 export async function getStaticProps() {
   const { data } = await client.query({

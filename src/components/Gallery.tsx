@@ -80,8 +80,7 @@ const Gallery = (props: MyProps) => {
                         loader={myLoader}
                         height="252"
                         width="380"
-                        sizes="(max-width: 768px) 100vw"
-                        priority={true}
+                        style={{width:"100%"}}
                       />
                     )}
 
@@ -92,7 +91,7 @@ const Gallery = (props: MyProps) => {
                         loader={myLoader}
                         height="252"
                         width="380"
-                        priority={true}
+                        style={{width:"100%"}}
                         />
                     )}
 
@@ -105,8 +104,7 @@ const Gallery = (props: MyProps) => {
                         loader={myLoader}
                         height="252"
                         width="380"
-                        priority={true}
-                        style={{width:"100%",height:"100%"}}
+                        style={{width:"100%"}}
                       />
                     )}
                   </Col>
@@ -118,7 +116,7 @@ const Gallery = (props: MyProps) => {
                         loader={myLoader}
                         height="252"
                         width="380"
-                        priority={true} />
+                        style={{width:"100%"}} />
                     )}
 
                     {image?.HomeLandingPage?.gallery?.galleryImage5 == null ? "" : (
@@ -128,7 +126,7 @@ const Gallery = (props: MyProps) => {
                         loader={myLoader}
                         height="252"
                         width="380"
-                        priority={true} />
+                        style={{width:"100%"}} />
                     )}
                   </Col>
                 </Row>

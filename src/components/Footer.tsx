@@ -1,18 +1,15 @@
-import React from "react";
-import { Col, Container, Row, Nav } from "react-bootstrap";
-import styles from "scss/components/Footer.module.scss";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Link from "next/link";
-import Image from "next/image";
+import { gql } from "@apollo/client";
 import {
   faFacebookF,
-  faTiktok,
   faInstagram,
   faLinkedinIn,
 } from "@fortawesome/free-brands-svg-icons";
-import { gql } from "@apollo/client";
-import { ApolloClient, InMemoryCache } from "@apollo/client";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { client } from "lib/apollo";
+import Image from "next/image";
+import Link from "next/link";
+import { Col, Container, Nav, Row } from "react-bootstrap";
+import styles from "scss/components/Footer.module.scss";
 
 export async function getStaticProps() {
   const { data } = await client.query({
@@ -139,7 +136,6 @@ const Footer = (props: MyProps) => {
                     alt={prefixSettings?.footerLogoSection?.logoUpload?.altText}
                     width="200"
                     height="33"
-                    priority={true}
                   />
                 </Link>
                 <p className="copyright">
@@ -247,20 +243,6 @@ const Footer = (props: MyProps) => {
                           href={prefixSettings?.socialUrl?.linkedin}
                         >
                           <FontAwesomeIcon icon={faLinkedinIn} />
-                        </a>
-                      </li>
-                    )}
-
-                    {prefixSettings?.socialUrl?.tiktok == null ? (
-                      ""
-                    ) : (
-                      <li>
-                        <a
-                          title="TikTok"
-                          target="__blank"
-                          href={prefixSettings?.socialUrl?.tiktok}
-                        >
-                          <FontAwesomeIcon icon={faTiktok} />
                         </a>
                       </li>
                     )}

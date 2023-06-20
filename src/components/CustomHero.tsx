@@ -41,7 +41,7 @@ function CustomHero({
             {title}
           </p>
           <p className="hero-title text-center">
-          <span className='asim-post-meta' >By Cansoft | <Moment format="MMM D, YYYY" >{date}</Moment></span>
+          <span className='asim-post-meta' >By Vancouver SEO Services | <Moment format="MMM D, YYYY" >{date}</Moment></span>
           </p>
 
         <div className={styles.intro}>

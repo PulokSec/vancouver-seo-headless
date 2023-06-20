@@ -15,7 +15,6 @@ const CustomRightArrow = ({ onClick, ...rest }: any) => {
     onMove,
     carouselState: { currentSlide, deviceType },
   } = rest;
-  // onMove means if dragging or swiping in progress.
   return (
     <button
       aria-label="Right Arrow"
@@ -70,7 +69,7 @@ type MyProps = {
 
 const ClientReviews = (props: MyProps) => {
   const { reviews } = props;
-const router = useRouter();
+  const router = useRouter();
   const myLoader = ({ src, width, quality }) => {
     return `${src}?w=${width}&q=${quality || 75}`;
   };
@@ -79,50 +78,64 @@ const router = useRouter();
     <>
       {reviews?.testimonials?.length > 1 && (
         <Container className="review">
-          <h1 className="my-5 text-center">{reviews?.bannerTitle?.split(" ")?.[0]} <span style={{color:"#f0b254"}}>{reviews?.bannerTitle?.split(" ")?.[1]}</span></h1>
-        <Carousel
-          customRightArrow={<CustomRightArrow />}
-          customLeftArrow={<CustomLeftArrow />}
-          autoPlay={true}
-          infinite={true}
-          responsive={responsive}
-        >
-          {reviews?.testimonials?.map((review: any, index: number) => {
-            return (
-              // <div key={index}>
+          <h1 className="my-5 text-center">
+            {reviews?.bannerTitle?.split(" ")?.[0]}{" "}
+            <span style={{ color: "#f0b254" }}>
+              {reviews?.bannerTitle?.split(" ")?.[1]}
+            </span>
+          </h1>
+          <Carousel
+            customRightArrow={<CustomRightArrow />}
+            customLeftArrow={<CustomLeftArrow />}
+            autoPlay={true}
+            infinite={true}
+            responsive={responsive}
+          >
+            {reviews?.testimonials?.map((review: any, index: number) => {
+              return (
+                // <div key={index}>
                 <div key={index} className="review-box card ml-5">
                   <div className="card-body">
                     <div>
-                    <q className="review-content">
-                      {review?.testimonial?.length > 200 ? review?.testimonial?.slice(0, 200) + "..." : review?.testimonial}
-                    </q>
+                      <q className="review-content">
+                        {review?.testimonial?.length > 200
+                          ? review?.testimonial?.slice(0, 200) + "..."
+                          : review?.testimonial}
+                      </q>
                     </div>
                     <div className="review-body">
-                <div className="review-img">
-                <Image 
-                  src={review?.client_image ? review?.client_image : userLogo}
-                  loader={myLoader}  
-                  style={{zIndex: 0}} 
-                  alt='Logo'
-                  width={30}
-                  height={30}
-                  priority={true}
-                  />
-                </div>
-                <div className="review-name">
-                    <p className="">
-                      {review?.clientName}
-                    </p>
-                </div>
-              </div>
+                      <div className="review-img">
+                        <Image
+                          src={
+                            review?.client_image
+                              ? review?.client_image
+                              : userLogo
+                          }
+                          loader={myLoader}
+                          style={{ zIndex: 0 }}
+                          alt="Logo"
+                          width={30}
+                          height={30}
+                        />
+                      </div>
+                      <div className="review-name">
+                        <p className="">{review?.clientName}</p>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              // </div>
-            );
-          })}
-        </Carousel>
-        <p className="review-text" onClick={()=> router.push("/testimonials")}> View all Reviews</p>
-      </Container>
+                // </div>
+              );
+            })}
+          </Carousel>
+          <p
+            className="review-text"
+            onClick={() => router.push("/testimonials")}
+          >
+            {" "}
+            View all Reviews
+          </p>
+        </Container>
       )}
     </>
   );

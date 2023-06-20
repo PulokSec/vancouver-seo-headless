@@ -99,17 +99,17 @@ const Banner = (props: MyProps) => {
                             clipPath: "inset(0 0 0 0)",
                           }}
                         >
-                            <div className="slider-images">
-                              <Image
-                                loader={myLoader}
-                                alt="Asim Ali Slider"
-                                src={slide?.sliderImage?.sourceUrl}
-                                fill
-                                priority={true}
-                                sizes="(max-width: 768px) 100vw"
-                              />
-                            </div>
+                          <div className="slider-images">
+                            <Image
+                              loader={myLoader}
+                              alt="Asim Ali Slider"
+                              src={slide?.sliderImage?.sourceUrl}
+                              fill
+                              priority={true}
+                              sizes="(max-width: 768px) 100vw"
+                            />
                           </div>
+                        </div>
                         <div className={styles.overlay}>
                           <Carousel.Caption className={styles.carouselcaption}>
                             <Row className="align-items-center home-slide">
@@ -140,7 +140,7 @@ const Banner = (props: MyProps) => {
                         </div>
                       </Carousel.Item>
                     );
-                  } //  --
+                  }
                 );
           })}
         </Carousel>

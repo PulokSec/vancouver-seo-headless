@@ -123,7 +123,6 @@ const socialNull = prefixSettings?.socialUrl?.facebook == null && prefixSettings
                       alt={prefixSettings?.footerLogoSection?.logoUpload?.altText}
                       height={33} 
                       width={200}
-                      priority={true}
                        />
                      
                       </Link>

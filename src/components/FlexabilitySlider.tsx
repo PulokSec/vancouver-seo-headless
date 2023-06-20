@@ -76,7 +76,6 @@ const FlexabilitySlider = (props: MyProps) => {
                           width={390}
                           height={400}
                           style={{width:"100%",height:"100%"}}
-                          priority={true}
                           alt={slide?.sliderImage?.altText}
                         />
                       </div>
