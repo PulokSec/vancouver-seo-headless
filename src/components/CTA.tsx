@@ -80,7 +80,7 @@ const CTA = () => {
                         cat?.HomeLandingPage?.callToActionSection
                           ?.actionBackgroundImage?.sourceUrl
                       }
-                      loader={myLoader}
+                      
                       alt="Logo"          
                       width={390}
                       height={400}

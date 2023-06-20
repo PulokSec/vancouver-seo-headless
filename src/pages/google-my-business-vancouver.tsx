@@ -248,7 +248,7 @@ const GoogleMyBusiness = (props: MyProps) => {
                   <Col md={5}>
                     <Image
                       src={data?.GoogleMyBusiness?.aboutImage?.sourceUrl}
-                      loader={myLoader}
+                      
                       alt={data?.GoogleMyBusiness?.aboutImage?.altText}
                       width="390"
                       height="400"
@@ -297,7 +297,7 @@ const GoogleMyBusiness = (props: MyProps) => {
                   <Col md={6}>
                     <Image
                       src={data?.GoogleMyBusiness?.productsImage?.sourceUrl}
-                      loader={myLoader}
+                      
                       alt={data?.GoogleMyBusiness?.productsImage?.altText}
                       width="390"
                       height="400"

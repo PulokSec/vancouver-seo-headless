@@ -132,7 +132,7 @@ const Footer = (props: MyProps) => {
                     src={
                       prefixSettings?.footerLogoSection?.logoUpload?.sourceUrl
                     }
-                    loader={myLoader}
+                    
                     alt={prefixSettings?.footerLogoSection?.logoUpload?.altText}
                     width="200"
                     height="33"

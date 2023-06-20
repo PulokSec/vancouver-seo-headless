@@ -67,7 +67,7 @@ const SplitImageLeft = (props: MyProps) => {
                           splitImage?.HomeLandingPage?.splitImageLeftSection
                             ?.splitImage?.sourceUrl
                         }
-                        loader={myLoader}
+                        
                         width="380"
                         height="500"
                         style={{ height: '100%', width: '100%' }}

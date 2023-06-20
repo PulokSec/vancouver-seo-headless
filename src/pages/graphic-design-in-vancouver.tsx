@@ -244,7 +244,7 @@ const GDesign = (props: MyProps) => {
                   <Col md={5}>
                     <Image
                       src={data?.GDesign?.aboutImage?.sourceUrl}
-                      loader={myLoader}
+                      
                       alt={data?.GDesign?.aboutImage?.altText}
                       width="390"
                       height="400"
@@ -293,7 +293,7 @@ const GDesign = (props: MyProps) => {
                   <Col md={6}>
                     <Image
                       src={data?.GDesign?.productsImage?.sourceUrl}
-                      loader={myLoader}
+                      
                       alt={data?.GDesign?.productsImage?.altText}
                       width="390"
                       height="400"

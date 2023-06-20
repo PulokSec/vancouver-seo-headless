@@ -119,7 +119,7 @@ const socialNull = prefixSettings?.socialUrl?.facebook == null && prefixSettings
                     <Link href="/" >
                      <Image 
                       src={prefixSettings?.footerLogoSection?.logoUpload?.sourceUrl}
-                      loader={myLoader}
+                      
                       alt={prefixSettings?.footerLogoSection?.logoUpload?.altText}
                       height={33} 
                       width={200}

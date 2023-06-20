@@ -84,13 +84,14 @@ const Meeting = (props: MyProps) => {
                             clipPath: "inset(0 0 0 0)",
                           }}>
                         <Image
-                          loader={myLoader}
+                          
                           src={
                             meeting?.HomeLandingPage?.meetingSection
                               ?.meetingImage?.sourceUrl
                           }
                           fill
-                          sizes="(max-width: 768px) 100vw"
+                          style={{ height: '100%', width: '100%' }}
+                          priority={true}
                           alt={
                             meeting?.HomeLandingPage?.meetingSection
                               ?.meetingImage?.altText

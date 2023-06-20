@@ -244,7 +244,7 @@ const Webdesign = (props: MyProps) => {
                   <Col md={5}>
                     <Image
                       src={data?.Webdesign?.aboutImage?.sourceUrl}
-                      loader={myLoader}
+                      
                       alt={data?.Webdesign?.aboutImage?.altText}
                       width="390"
                       height="400"
@@ -293,7 +293,7 @@ const Webdesign = (props: MyProps) => {
                   <Col md={6}>
                     <Image
                       src={data?.Webdesign?.productsImage?.sourceUrl}
-                      loader={myLoader}
+                      
                       alt={data?.Webdesign?.productsImage?.altText}
                       width="390"
                       height="400"

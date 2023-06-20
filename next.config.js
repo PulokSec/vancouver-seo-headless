@@ -9,11 +9,10 @@ module.exports =  withFaust ({
   eslint: { ignoreDuringBuilds: true },
   reactStrictMode: true,
   staticPageGenerationTimeout: 5000,
-  experimental: {
-    images: {
-      optimized: true,
-      allowFutureImage: true
-    }
+  images:{
+    domains: ['localhost', 'pulok.csoft.ca'],
+    optimized: true,
+    allowFutureImage: true
   },
   async headers() {
     return [

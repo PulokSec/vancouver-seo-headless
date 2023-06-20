@@ -124,7 +124,7 @@ const PartnerLogo = (props: MyProps) => {
                       return (
                         <div key={singleLogo.sourceUrl}>
                           <Image
-                            loader={myLoader}
+                            
                             src={singleLogo.sourceUrl}
                             width="100"
                             height="100"

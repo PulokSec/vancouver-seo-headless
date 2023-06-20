@@ -245,7 +245,7 @@ const News = (props: MyProps) => {
                         <div className="card h-100">
                           <div className="blogImage">
                             <Image
-                              loader={myLoader}
+                              
                               src={item?.featuredImage?.node?.sourceUrl}
                               height="269"
                               width="370"

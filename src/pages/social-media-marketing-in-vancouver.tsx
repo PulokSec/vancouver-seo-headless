@@ -247,7 +247,7 @@ const SMMarketing = (props: MyProps) => {
                   <Col md={5}>
                     <Image
                       src={data?.SMMarketing?.aboutImage?.sourceUrl}
-                      loader={myLoader}
+                      
                       alt={data?.SMMarketing?.aboutImage?.altText}
                       width="390"
                       height="400"
@@ -296,7 +296,7 @@ const SMMarketing = (props: MyProps) => {
                   <Col md={6}>
                     <Image
                       src={data?.SMMarketing?.productsImage?.sourceUrl}
-                      loader={myLoader}
+                      
                       alt={data?.SMMarketing?.productsImage?.altText}
                       width="390"
                       height="400"

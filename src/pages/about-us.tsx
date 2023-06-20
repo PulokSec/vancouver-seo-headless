@@ -259,7 +259,7 @@ const Services = (props: MyProps) => {
                           <Col className="service-texts" lg={6}>
                             <div className="service-image">
                               <Image
-                                loader={myLoader}
+                                
                                 src={service?.serviceImage?.sourceUrl}
                                 alt={service?.serviceImage?.altText}
                                 width={390}

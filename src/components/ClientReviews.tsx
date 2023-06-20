@@ -111,7 +111,7 @@ const ClientReviews = (props: MyProps) => {
                               ? review?.client_image
                               : userLogo
                           }
-                          loader={myLoader}
+                          
                           style={{ zIndex: 0 }}
                           alt="Logo"
                           width={30}

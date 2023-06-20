@@ -101,7 +101,6 @@ const Banner = (props: MyProps) => {
                         >
                           <div className="slider-images">
                             <Image
-                              loader={myLoader}
                               alt="Asim Ali Slider"
                               src={slide?.sliderImage?.sourceUrl}
                               fill

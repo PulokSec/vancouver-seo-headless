@@ -245,7 +245,7 @@ const PPCManagement = (props: MyProps) => {
                   <Col md={5}>
                     <Image
                       src={data?.PPCManagement?.aboutImage?.sourceUrl}
-                      loader={myLoader}
+                      
                       alt={data?.PPCManagement?.aboutImage?.altText}
                       width="390"
                       height="400"
@@ -294,7 +294,7 @@ const PPCManagement = (props: MyProps) => {
                   <Col md={4}>
                     <Image
                       src={data?.PPCManagement?.productsImage?.sourceUrl}
-                      loader={myLoader}
+                      
                       alt={data?.PPCManagement?.productsImage?.altText}
                       width="390"
                       height="400"

@@ -77,7 +77,7 @@ const Gallery = (props: MyProps) => {
                       <Image
                         src={image?.HomeLandingPage?.gallery?.galleryImage1?.sourceUrl}
                         alt={image?.HomeLandingPage?.gallery?.galleryImage1?.altText}
-                        loader={myLoader}
+                        
                         height="252"
                         width="380"
                         style={{width:"100%"}}
@@ -88,7 +88,7 @@ const Gallery = (props: MyProps) => {
                       <Image
                         src={image?.HomeLandingPage?.gallery?.galleryImage2?.sourceUrl}
                         alt={image?.HomeLandingPage?.gallery?.galleryImage2?.altText}
-                        loader={myLoader}
+                        
                         height="252"
                         width="380"
                         style={{width:"100%"}}
@@ -101,7 +101,7 @@ const Gallery = (props: MyProps) => {
                       <Image
                         src={image?.HomeLandingPage?.gallery?.galleryImage3?.sourceUrl}
                         alt={image?.HomeLandingPage?.gallery?.galleryImage3?.altText}
-                        loader={myLoader}
+                        
                         height="252"
                         width="380"
                         style={{width:"100%"}}
@@ -113,7 +113,7 @@ const Gallery = (props: MyProps) => {
                       <Image
                         src={image?.HomeLandingPage?.gallery?.galleryImage4?.sourceUrl}
                         alt={image?.HomeLandingPage?.gallery?.galleryImage4?.altText}
-                        loader={myLoader}
+                        
                         height="252"
                         width="380"
                         style={{width:"100%"}} />
@@ -123,7 +123,7 @@ const Gallery = (props: MyProps) => {
                       <Image
                         src={image?.HomeLandingPage?.gallery?.galleryImage5?.sourceUrl}
                         alt={image?.HomeLandingPage?.gallery?.galleryImage5?.altText}
-                        loader={myLoader}
+                        
                         height="252"
                         width="380"
                         style={{width:"100%"}} />

@@ -97,7 +97,6 @@ const MobileBanner = (props: MyProps) => {
                           }}></div>
                         <div>
                           <Image
-                            loader={myLoader}
                             alt="Asim Ali Slider"
                             src={slide?.mobileImage?.sourceUrl}
                             fill
