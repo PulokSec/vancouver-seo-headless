@@ -104,7 +104,6 @@ const Banner = (props: MyProps) => {
                               alt="Asim Ali Slider"
                               src={slide?.sliderImage?.sourceUrl}
                               fill
-                              priority={true}
                               sizes="(max-width: 768px) 100vw"
                             />
                           </div>

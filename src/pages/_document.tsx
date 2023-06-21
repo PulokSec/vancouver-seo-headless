@@ -1,6 +1,6 @@
 import Document, { Html, Head, Main, NextScript } from 'next/document'
 import { getLangFromReq } from '../utils/fromReq'
-import { getCsp } from '../utils/csp'
+// import { getCsp } from '../utils/csp'
 
 class MyDocument extends Document {
   static async getInitialProps(ctx : any) {
@@ -27,8 +27,8 @@ class MyDocument extends Document {
           <link href='/favicon-32x32.png' rel='icon' type='image/png' sizes='32x32' />
           <link rel="apple-touch-icon" href="/apple-touch-icon.png"></link>
         <meta name="theme-color" content="#ffffff" />
-        <meta name="referrer" content={'strict-origin'} />
-          <meta httpEquiv="Content-Security-Policy" content={getCsp(NextScript.getInlineScriptSource(this.props))} />
+        {/* <meta name="referrer" content={'strict-origin'} /> */}
+          {/* <meta httpEquiv="Content-Security-Policy" content={getCsp(NextScript.getInlineScriptSource(this.props))} /> */}
       </Head>
       <body>
         <Main />
