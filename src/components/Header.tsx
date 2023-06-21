@@ -75,7 +75,7 @@ function Header(props: MyProps) {
       </Head>
       <Navbar bg="light" expand="lg">
 
-        <Container style={{height:"7vh"}}>
+        <Container>
           <Navbar.Brand>
             {(settings as any)?.headerSettings?.uploadLogo == null ? "" : (
               <Link href="/">
