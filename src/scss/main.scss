@@ -87,17 +87,6 @@ body {
   font-size: 18px;
   line-height: 1.6;
   overflow-x: hidden;
-  // .preloader {
-  // 	background: $color-primary;
-  // 	width: 100%;
-  // 	height: 100%;
-  // 	z-index: 99;
-  // 	position: fixed;
-  // 	text-align: center;
-  // 	display: flex;
-  // 	justify-content: center;
-  // 	align-items: center;
-  // }
 }
 .navbar-nav {
   ul {
@@ -764,7 +753,6 @@ footer {
 }
 
 .partnerLogo {
-  margin: 20px 0 100px 0;
   .react-multiple-carousel__arrow {
     background-color: transparent;
     &:before {
@@ -1993,9 +1981,9 @@ q.review-content {
 }
   footer .wrap .footer-menu ul span {
     float: none;
-    margin-right: 0;
+    margin: 0;
 }
-.ms-auto.py-5.my-5.my-lg-0.footer-menu {
+.footer-menu {
   margin: 0 !important;
 }
   .flexability-slider .carouselcaption .bannerCaption {
@@ -2105,6 +2093,19 @@ q.review-content {
 }
 
 @media all and (max-width: 441px) {
+  .gallery_img{
+    height: 66px;
+    width: 112px;
+  }
+  .footer-menu ul {
+    width: 100%;
+    margin-top: 10px;
+    padding: 0;
+    text-align: center;
+    li{
+      margin-top: 15px;
+    }
+  }
   .split_image{
     height:500px;
   }
@@ -2125,7 +2126,7 @@ q.review-content {
       top: 20%;
   }
   .meeting_image {
-      display: none;
+      display: block;
   }
   .Banner_carouselcaption__NAlFf .Banner_bannerCaption__rNEma .sliderTitle {
     font-size: 40px;

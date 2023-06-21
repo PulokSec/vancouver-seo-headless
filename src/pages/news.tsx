@@ -198,7 +198,7 @@ const News = (props: MyProps) => {
   return (
     <div>
       <Head>
-        {metaData.map((meta) => {
+        {metaData.map((meta:any) => {
           return (
             <>
               <title>{meta?.seo?.title}</title>
@@ -219,7 +219,7 @@ const News = (props: MyProps) => {
       </Head>
       <Header settings={settings} mainMenus={mainMenus} />
 
-      {newsData?.map((data, i) => {
+      {newsData?.map((data:any, i:any) => {
         return (
           <div key={i}>
             <main className="content">
@@ -239,7 +239,7 @@ const News = (props: MyProps) => {
               <Container className="my-5 blog-container">
                 <h1 className="my-3">{data?.news?.newsBannerTitle}</h1>
                 <div className="row row-cols-1 row-cols-md-3 g-4 items">
-                  {news?.map((item, index) => {
+                  {news?.map((item:any, index:any) => {
                     return (
                       <div key={index} className="col">
                         <div className="card h-100">

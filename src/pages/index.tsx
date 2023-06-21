@@ -341,7 +341,7 @@ export default function Page(props: MyProps) {
   return (
     <>
       <Head>
-        {metaData.map((meta) => {
+        {metaData.map((meta:any) => {
           return (
             <>
               <noscript

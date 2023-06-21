@@ -156,9 +156,9 @@ const Contact = (props: MyProps) => {
 
   return (
     <>
-      {contactData.map((contact, index) => {
+      {contactData.map((contact:any) => {
         return (
-          <div key={index}>
+          <>
             <Head>
               {metaData.map((meta) => {
                 return (
@@ -375,7 +375,7 @@ const Contact = (props: MyProps) => {
               </div>
             </main>
             <Footer settings={settings} mainMenus={mainMenus} />
-          </div>
+          </>
         );
       })}
     </>

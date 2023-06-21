@@ -106,7 +106,7 @@ const PartnerLogo = (props: MyProps) => {
   return (
     <>
       <Container className="partnerLogo">
-        {logos?.map((logo) => {
+        {logos?.map((logo:any) => {
           return (
             <div key={logo.HomeLandingPage}>
               {logo?.HomeLandingPage?.partnerLogoSection.hideSection == true ? (

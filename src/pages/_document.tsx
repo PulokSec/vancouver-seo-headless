@@ -1,43 +1,42 @@
-import Document, { Html, Head, Main, NextScript } from "next/document";
+import Document, { Html, Head, Main, NextScript } from 'next/document'
+import { getLangFromReq } from '../utils/fromReq'
+import { getCsp } from '../utils/csp'
 
+class MyDocument extends Document {
+  static async getInitialProps(ctx : any) {
+    const initialProps = await Document.getInitialProps(ctx)
+    const lang = getLangFromReq(ctx.req)
+    return { ...initialProps, lang }
+  }
 
-const MyDocument = () => {
-
-   
-
+  render() {
   return (
     <Html lang="en-US">
-        <Head>
-        
-         <noscript>
-        {/* <script
+      <Head>
+        <noscript>
+          {/* <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(fasd) }}
         /> */}
         </noscript>
-            
-            {/* <link type="image/webp" rel="preload" as="image" href="/home-banner.webp" /> */}
 
-
-            <link rel="manifest" href="/manifest.json" />
-            <link rel="apple-touch-icon" href="/favicon.ico"></link>
-
-            {/* <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-            <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" /> */}
-            <link rel="icon" type="image/png" sizes="16x16" href="/favicon.png" />
-            <link rel="manifest" href="/site.webmanifest" />
-            <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#12143a" />
-            <meta name="msapplication-TileColor" content="#da532c" />
-            {/* <meta name="msapplication-TileImage" content="/mstile-144x144.png" /> */}
-            <meta name="theme-color" content="#ffffff" />
-            
-        </Head>
-        <body>
-            <Main />
-            <NextScript />
-        </body>
+        <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+          <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+          <link rel="manifest" href="/manifest.json" />
+          <link href='/favicon-16x16.png' rel='icon' type='image/png' sizes='16x16' />
+          <link href='/favicon-32x32.png' rel='icon' type='image/png' sizes='32x32' />
+          <link rel="apple-touch-icon" href="/apple-touch-icon.png"></link>
+        <meta name="theme-color" content="#ffffff" />
+        <meta name="referrer" content={'strict-origin'} />
+          <meta httpEquiv="Content-Security-Policy" content={getCsp(NextScript.getInlineScriptSource(this.props))} />
+      </Head>
+      <body>
+        <Main />
+        <NextScript />
+      </body>
     </Html>
   )
+      }
 }
 
-export default MyDocument
+export default MyDocument;

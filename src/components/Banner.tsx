@@ -94,7 +94,7 @@ const Banner = (props: MyProps) => {
                         <div
                           style={{
                             position: "relative",
-                            height: "110vh",
+                            height: "95vh",
                             width: "100%",
                             clipPath: "inset(0 0 0 0)",
                           }}

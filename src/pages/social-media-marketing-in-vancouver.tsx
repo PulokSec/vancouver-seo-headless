@@ -184,11 +184,11 @@ const SMMarketing = (props: MyProps) => {
 
   return (
     <>
-      {sMMarketingData.map((data, index) => {
+      {sMMarketingData.map((data:any, index:any) => {
         return (
           <div key={index} className="Bc-Coquitlam">
             <Head>
-              {metaData.map((meta) => {
+              {metaData.map((meta:any) => {
                 return (
                   <>
                     <title>{meta?.seo?.title}</title>
@@ -265,7 +265,7 @@ const SMMarketing = (props: MyProps) => {
                       infinite={true}
                       responsive={responsive}
                     >
-                      {data?.SMMarketing?.slider.map((slide, a) => {
+                      {data?.SMMarketing?.slider.map((slide:any, a:any) => {
                         return (
                           <div
                             key={a}
@@ -367,7 +367,7 @@ const SMMarketing = (props: MyProps) => {
                       onSelect={(k) => setKey(k)}
                       className="mb-3 renovation"
                     >
-                      {data.SMMarketing.renovation.map((tab, item) => {
+                      {data.SMMarketing.renovation.map((tab:any, item:any) => {
                         return (
                           <Tab
                             key={item}

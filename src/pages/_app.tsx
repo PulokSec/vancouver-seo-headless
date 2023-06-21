@@ -1,22 +1,16 @@
-import 'faust.config';
 import { FaustProvider } from '@faustjs/next';
-import React, { useEffect } from 'react';
-import 'scss/main.scss';
-import { client } from 'client';
-import type { AppProps } from 'next/app';
+import '@fortawesome/fontawesome-svg-core/styles.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-import '@fortawesome/fontawesome-svg-core/styles.css'
+import { client } from 'client';
+import 'faust.config';
+import type { AppProps } from 'next/app';
+import 'scss/main.scss';
 // import Script from "next/script";
 // import { TRACKING_ID } from "./../../utils/variables";
 import PageWrapper from 'components/Pagewrapper';
 
 export default function MyApp({ Component, pageProps }: AppProps) {
 
-  // useEffect(() => {
-  //   if ('serviceWorker' in navigator) {
-  //     navigator.serviceWorker.register('/sw.js');
-  //   }
-  // }, []);
 
   return (
     <>

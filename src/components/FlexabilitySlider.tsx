@@ -61,7 +61,7 @@ const FlexabilitySlider = (props: MyProps) => {
           {flexsliders?.map(function (slider) {
             return slider?.HomeLandingPage?.flexabilitySlider == null
               ? ""
-              : slider?.HomeLandingPage?.flexabilitySlider.map((slide) => {
+              : slider?.HomeLandingPage?.flexabilitySlider.map((slide:any) => {
                   return (
                     <Carousel.Item key={slide.sliderTitle}>
                       <div className="slider-images" style={{

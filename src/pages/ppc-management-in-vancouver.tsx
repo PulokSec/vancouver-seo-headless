@@ -184,11 +184,11 @@ const PPCManagement = (props: MyProps) => {
 
   return (
     <>
-      {ppcManagementData?.map((data, index) => {
+      {ppcManagementData?.map((data:any, index:any) => {
         return (
           <div key={index} className="Bc-Coquitlam">
             <Head>
-              {metaData.map((meta) => {
+              {metaData.map((meta:any) => {
                 return (
                   <>
                     <title>{meta?.seo?.title}</title>
@@ -263,7 +263,7 @@ const PPCManagement = (props: MyProps) => {
                       infinite={true}
                       responsive={responsive}
                     >
-                      {data?.PPCManagement?.slider.map((slide, a) => {
+                      {data?.PPCManagement?.slider.map((slide:any, a:any) => {
                         return (
                           <div
                             key={a}
@@ -367,7 +367,7 @@ const PPCManagement = (props: MyProps) => {
                       onSelect={(k) => setKey(k)}
                       className="mb-3 renovation"
                     >
-                      {data.PPCManagement.renovation.map((tab, item) => {
+                      {data.PPCManagement.renovation.map((tab:any, item:any) => {
                         return (
                           <Tab
                             key={item}

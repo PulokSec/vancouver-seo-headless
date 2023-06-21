@@ -157,11 +157,11 @@ const Footer = (props: MyProps) => {
           </Row>
           <Row>
             <Container>
-              <div className="ms-auto py-5 my-5 my-lg-0 footer-menu">
-                {mainMenus.map((link) => {
+              <div className="footer-menu">
+                {mainMenus.map((link:any) => {
                   return (
                     <ul key={`${link.label}$-menu`}>
-                      {link.menuItems.nodes.map((item) => {
+                      {link.menuItems.nodes.map((item:any) => {
                         return (
                           <li key={`${item.label}$-menu`}>
                             {item.parentId == null ? (
@@ -170,7 +170,7 @@ const Footer = (props: MyProps) => {
                                   <span className="link">{item.label}</span>
                                 </Nav.Link>
                                 <ul className="submenu">
-                                  {item.childItems.nodes.map((submenu) => {
+                                  {item.childItems.nodes.map((submenu:any) => {
                                     return (
                                       <li key={submenu.uri}>
                                         <Nav.Link

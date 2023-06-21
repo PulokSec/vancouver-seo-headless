@@ -184,11 +184,11 @@ const Webdesign = (props: MyProps) => {
 
   return (
     <>
-      {webdesignData.map((data, index) => {
+      {webdesignData.map((data:any, index:any) => {
         return (
           <div key={index} className="Bc-Coquitlam">
             <Head>
-              {metaData.map((meta) => {
+              {metaData.map((meta:any) => {
                 return (
                   <>
                     <title>{meta?.seo?.title}</title>
@@ -262,7 +262,7 @@ const Webdesign = (props: MyProps) => {
                       infinite={true}
                       responsive={responsive}
                     >
-                      {data?.Webdesign?.slider.map((slide, a) => {
+                      {data?.Webdesign?.slider.map((slide:any, a:any) => {
                         return (
                           <div
                             key={a}
@@ -364,7 +364,7 @@ const Webdesign = (props: MyProps) => {
                       onSelect={(k) => setKey(k)}
                       className="mb-3 renovation"
                     >
-                      {data.Webdesign.renovation.map((tab, item) => {
+                      {data.Webdesign.renovation.map((tab:any, item:any) => {
                         return (
                           <Tab
                             key={item}

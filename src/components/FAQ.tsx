@@ -45,9 +45,9 @@ const FAQ = (props: MyProps) => {
 
   return (
     <>
-      {faqsections?.map((faq) => {
+      {faqsections?.map((faq:any,idx) => {
         return (
-          <Container key={faq}>
+          <Container key={idx}>
             {faq?.HomeLandingPage?.faqSection?.hideSection == true ? (
               ""
             ) : (

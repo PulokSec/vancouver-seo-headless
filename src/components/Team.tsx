@@ -42,9 +42,9 @@ const Team = (props: MyProps) => {
   return (
     <>
       <Container>
-        {teams?.map((team) => {
+        {teams?.map((team:any, idx:any) => {
           return (
-            <div key={team}>
+            <div key={idx}>
               {team?.HomeLandingPage?.teamSection?.hideSection == true ? (
                 ""
               ) : (

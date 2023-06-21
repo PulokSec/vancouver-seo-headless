@@ -49,7 +49,7 @@ console.log(metaData);
   return (
     <>
       <Head>
-        {metaData.map((meta) => {
+        {metaData.map((meta:any) => {
           return (
             <>
               <title>{meta?.seo?.title}</title>

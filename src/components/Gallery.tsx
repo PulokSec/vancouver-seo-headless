@@ -67,9 +67,9 @@ const Gallery = (props: MyProps) => {
   return (
     <>
       <div className="gallery_section">
-        {images?.map(image => {
+        {images?.map((image:any,idx) => {
           return (
-            <Container key={image}>
+            <Container key={idx}>
               {image?.HomeLandingPage?.gallery?.hideSection === true ? "" : (
                 <Row className='gx-3'>
                   <Col>
@@ -77,7 +77,7 @@ const Gallery = (props: MyProps) => {
                       <Image
                         src={image?.HomeLandingPage?.gallery?.galleryImage1?.sourceUrl}
                         alt={image?.HomeLandingPage?.gallery?.galleryImage1?.altText}
-                        
+                        className="gallery_img"
                         height="252"
                         width="380"
                         style={{width:"100%"}}
@@ -88,7 +88,7 @@ const Gallery = (props: MyProps) => {
                       <Image
                         src={image?.HomeLandingPage?.gallery?.galleryImage2?.sourceUrl}
                         alt={image?.HomeLandingPage?.gallery?.galleryImage2?.altText}
-                        
+                        className="gallery_img"
                         height="252"
                         width="380"
                         style={{width:"100%"}}
@@ -101,7 +101,7 @@ const Gallery = (props: MyProps) => {
                       <Image
                         src={image?.HomeLandingPage?.gallery?.galleryImage3?.sourceUrl}
                         alt={image?.HomeLandingPage?.gallery?.galleryImage3?.altText}
-                        
+                        className="gallery_img"
                         height="252"
                         width="380"
                         style={{width:"100%"}}
@@ -113,7 +113,7 @@ const Gallery = (props: MyProps) => {
                       <Image
                         src={image?.HomeLandingPage?.gallery?.galleryImage4?.sourceUrl}
                         alt={image?.HomeLandingPage?.gallery?.galleryImage4?.altText}
-                        
+                        className="gallery_img"
                         height="252"
                         width="380"
                         style={{width:"100%"}} />
@@ -123,7 +123,7 @@ const Gallery = (props: MyProps) => {
                       <Image
                         src={image?.HomeLandingPage?.gallery?.galleryImage5?.sourceUrl}
                         alt={image?.HomeLandingPage?.gallery?.galleryImage5?.altText}
-                        
+                        className="gallery_img"
                         height="252"
                         width="380"
                         style={{width:"100%"}} />

@@ -159,11 +159,11 @@ const Services = (props: MyProps) => {
 
   return (
     <>
-      {servicesData.map((data, index) => {
+      {servicesData.map((data:any, index:any) => {
         return (
           <div key={index} className="our-services">
             <Head>
-              {metaData.map((meta) => {
+              {metaData.map((meta:any,idx:any) => {
                 return (
                   <>
                     <title>{meta?.seo?.title}</title>
@@ -204,7 +204,7 @@ const Services = (props: MyProps) => {
                     infinite={true}
                     responsive={responsive}
                   >
-                    {data?.services?.ourServices.map((slide, i) => {
+                    {data?.services?.ourServices.map((slide:any, i:any) => {
                       return (
                         <div key={i} className="slide-text">
                           <a href={`#${i}`}>{slide?.serviceTitle}</a>
@@ -251,7 +251,7 @@ const Services = (props: MyProps) => {
                   {data?.services?.ourMortgageServicesTitle}
                 </h2>
 
-                {data?.services?.ourServices.map((service, key) => {
+                {data?.services?.ourServices.map((service:any, key:any) => {
                   return (
                     <div className="service-row" id={key} key={key}>
                       <Container>

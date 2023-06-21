@@ -51,9 +51,9 @@ const SplitImageRight = (props: MyProps) => {
 
   return (
     <>
-      {splitImagesRight?.map((splitImage) => {
+      {splitImagesRight?.map((splitImage:any,idx:any) => {
         return (
-          <section key={splitImage} className="split_section">
+          <section key={idx} className="split_section">
             {splitImage?.HomeLandingPage?.splitImageRightSection?.hideSection ==
             true ? (
               ""

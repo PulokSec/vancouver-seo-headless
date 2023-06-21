@@ -34,7 +34,7 @@ function Posts({
         )}
         {intro && <p className={styles.intro}>{intro}</p>}
         <div className="posts">
-          {posts.map((post) => (
+          {posts.map((post:any) => (
             <div
               className={styles.single}
               key={post.id ?? ''}

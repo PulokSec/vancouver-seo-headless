@@ -184,11 +184,11 @@ const GDesign = (props: MyProps) => {
 
   return (
     <>
-      {gDesignData.map((data, index) => {
+      {gDesignData.map((data:any, index:any) => {
         return (
           <div key={index} className="Bc-Coquitlam">
             <Head>
-              {metaData.map((meta) => {
+              {metaData.map((meta:any) => {
                 return (
                   <>
                     <title>{meta?.seo?.title}</title>
@@ -262,10 +262,10 @@ const GDesign = (props: MyProps) => {
                       infinite={true}
                       responsive={responsive}
                     >
-                      {data?.GDesign?.slider.map((slide, a) => {
+                      {data?.GDesign?.slider.map((slide:any, idx:any) => {
                         return (
                           <div
-                            key={a}
+                            key={idx}
                             className="application-slide text-center"
                           >
                             <span>{slide?.title}</span>
@@ -364,7 +364,7 @@ const GDesign = (props: MyProps) => {
                       onSelect={(k) => setKey(k)}
                       className="mb-3 renovation"
                     >
-                      {data.GDesign.renovation.map((tab, item) => {
+                      {data.GDesign.renovation.map((tab:any, item:any) => {
                         return (
                           <Tab
                             key={item}

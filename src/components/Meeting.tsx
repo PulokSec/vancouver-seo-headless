@@ -47,9 +47,9 @@ const Meeting = (props: MyProps) => {
   return (
     <>
       <section className="meeting_section">
-        {meetings?.map((meeting) => {
+        {meetings?.map((meeting:any,idx:any) => {
           return (
-            <div key={meeting}>
+            <div key={idx}>
               {meeting?.HomeLandingPage?.meetingSection?.hideSection == true ? (
                 ""
               ) : (
@@ -91,7 +91,6 @@ const Meeting = (props: MyProps) => {
                           }
                           fill
                           style={{ height: '100%', width: '100%' }}
-                          priority={true}
                           alt={
                             meeting?.HomeLandingPage?.meetingSection
                               ?.meetingImage?.altText

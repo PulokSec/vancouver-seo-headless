@@ -2,17 +2,13 @@ import React from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import Image from 'next/image';
 import Link from 'next/link';
-import { client, MenuLocationEnum } from 'client';
 import { gql } from '@apollo/client';
-import { ApolloClient, InMemoryCache } from '@apollo/client';
 import Head from 'next/head';
+import { client } from 'lib/apollo';
 
 
 export async function getStaticProps() {
-  const client = new ApolloClient({
-    uri: `${process.env.NEXT_PUBLIC_WORDPRESS_URL}/graphql`,
-    cache: new InMemoryCache(),
-  });
+ 
 
   const { data } = await client.query({
     query: gql`query{
@@ -69,80 +65,17 @@ type MyProps = {
   mainMenus: any;
 };
 
-const schema =
-{
-  "@context": "https://schema.org/",
-  "@type": "Product",
-  "name": "Mortgage Brokers",
-  "image": [
-    "https://hy3nzzcq6pe8xlv2r634wluzm.js.wpenginepowered.com/wp-content/uploads/2023/03/mortgage-broker-surrey-9.webp",
-    "https://hy3nzzcq6pe8xlv2r634wluzm.js.wpenginepowered.com/wp-content/uploads/2023/03/home-banner.webp",
-    "https://hy3nzzcq6pe8xlv2r634wluzm.js.wpenginepowered.com/wp-content/uploads/2023/03/mortgage-broker-surrey-8.webp"
-  ],
-  "description": "Asim Ali and his team of the best mortgage brokers in Surrey will help you with the best mortgage rates available.",
-  "sku": "CAN1971SEO",
-  "mpn": "925872",
-  "brand": {
-    "@type": "Brand",
-    "name": "Asim Ali"
-  },
-  "review": {
-    "@type": "Review",
-    "reviewRating": {
-      "@type": "Rating",
-      "ratingValue": "5",
-      "bestRating": "5"
-    },
-    "author": {
-      "@type": "Person",
-      "name": "Ghazala Sarwar"
-    }
-  },
-  "offers": {
-    "@type": "Offer",
-    "url": "https://asimali.ca/",
-    "priceCurrency": "CAD",
-    "price": "499",
-    "priceValidUntil": "2020-12-31",
-    "availability": "https://schema.org/InStock"
-  },
-  "aggregateRating": {
-    "@type": "AggregateRating",
-    "ratingValue": "4.8",
-    "bestRating": "5",
-    "ratingCount": "209"
-  }
-};
 
 function Header(props: MyProps) {
   const { settings, mainMenus } = props;
 
-
-
-  const { menuItems } = client.useQuery()
-  const links = menuItems({
-    where: { location: MenuLocationEnum.PRIMARY },
-  }).nodes;
-
-
-  const myLoader = ({ src, width, quality }) => {
-    return `${src}?w=${width}&q=${quality || 75}`
-  }
-
   return (
     <>
       <Head>
-        <noscript>
-          <script
-            type="application/ld+json"
-            dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-          />
-        </noscript>
-
       </Head>
       <Navbar bg="light" expand="lg">
 
-        <Container>
+        <Container style={{height:"7vh"}}>
           <Navbar.Brand>
             {(settings as any)?.headerSettings?.uploadLogo == null ? "" : (
               <Link href="/">
@@ -170,10 +103,10 @@ function Header(props: MyProps) {
               // style={{ maxHeight: '100px' }}
               // navbarScroll
             >
-              {mainMenus?.map(link => {
+              {mainMenus?.map((link:any) => {
                 return (
                   <ul key={`${link.label}$-menu`} >
-                    {link.menuItems.nodes.map(item => {
+                    {link.menuItems.nodes.map((item:any)=> {
 
                       return (
                         <li key={`${item.label}$-menu`}>
@@ -184,7 +117,7 @@ function Header(props: MyProps) {
                                 <span className="link">{item.label}</span>
                               </Nav.Link>
                               <ul className="submenu">
-                                {item.childItems.nodes.map(submenu => {
+                                {item.childItems.nodes.map((submenu:any) => {
                                   return (
                                     <li
                                       key={submenu.uri}>

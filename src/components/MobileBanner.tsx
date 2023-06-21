@@ -1,12 +1,11 @@
-import React, { useState, useEffect } from "react";
-import { Carousel, Col, Row, Button, Spinner } from "react-bootstrap";
+import { gql } from "@apollo/client";
+import { client } from "lib/apollo";
+import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
+import { useEffect, useState } from "react";
+import { Button, Carousel, Col, Row } from "react-bootstrap";
 import styles from "scss/components/Banner.module.scss";
-import { gql } from "@apollo/client";
-import { ApolloClient, InMemoryCache } from "@apollo/client";
-import Head from "next/head";
-import { client } from "lib/apollo";
 
 export async function getStaticProps() {
   const { data } = await client.query({
@@ -86,7 +85,7 @@ const MobileBanner = (props: MyProps) => {
               null
               ? ""
               : slider?.HomeLandingPage?.homeSliderSection?.homeSlider.map(
-                  (slide) => {
+                  (slide:any) => {
                     return (
                       <Carousel.Item key={slide.sliderTitle}>
                         <div className={styles.overlay} style={{

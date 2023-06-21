@@ -125,11 +125,11 @@ const Testimonials = (props: MyProps) => {
 
   return (
     <>
-      {testimonialsData.map((data, index) => {
+      {testimonialsData.map((data:any, index:any) => {
         return (
           <div key={index} className="our-testimonial">
             <Head>
-              {metaData.map((meta) => {
+              {metaData.map((meta:any) => {
                 return (
                   <>
                     <title>{meta?.seo?.title}</title>
@@ -162,7 +162,7 @@ const Testimonials = (props: MyProps) => {
                   {data?.Testimonials?.testimonials
                     ?.slice(0)
                     .reverse()
-                    .map((testimonial, key) => {
+                    .map((testimonial:any, key:any) => {
                       return (
                         <div key={key} className="col">
                           <div className="testimonial-box card h-100">

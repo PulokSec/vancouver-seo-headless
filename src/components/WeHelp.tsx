@@ -50,7 +50,7 @@ const WeHelp = (props: MyProps) => {
 
   return (
     <>
-      {helps?.map((help) => {
+      {helps?.map((help:any) => {
         return (
           <div key={help?.HomeLandingPage?.weHelpSection}>
             {help?.HomeLandingPage?.weHelpSection?.hideSection == true ? (
