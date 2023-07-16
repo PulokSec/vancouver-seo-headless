@@ -1425,18 +1425,23 @@ textarea#comment {
   }
   .application-slider {
     color: $color-primary;
-    margin: 80px 0;
-    padding: 50px 0;
+    margin-bottom: 50px;
+    margin-top: 50px;
     border-top: 1px solid $color-secondary;
     border-bottom: 1px solid $color-secondary;
     .application-slide {
       span{
-        font-size: 2rem;
+        font-size: 1.8rem;
+        padding-left: 15px;
+        padding-right: 15px;
       }
       p {
         width: 90%;
         margin: auto;
         line-height: 30px;
+        padding-left: 15px;
+        padding-right: 15px;
+        padding-bottom: 10px;
       }
     }
     .react-multiple-carousel__arrow {
@@ -1694,7 +1699,7 @@ q.review-content {
   justify-content: start;
   flex-direction: row;
   gap: 10px;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 .review-img{
   width: 30px;
@@ -2093,6 +2098,31 @@ q.review-content {
 }
 
 @media all and (max-width: 441px) {
+  
+  .application-slider {
+    .application-slide {
+      span{
+        font-size: 1 rem;
+      }
+      p {
+        font-size: 13px;
+      }
+    }
+  }
+  .review{
+    h1{
+      font-size: 30px;
+    }
+  }
+  .sliderSubtitle{
+   font-size: 18px;
+  }
+  .sliderTitle{
+    font-size: 24px;
+  }
+  .sliderDescription{
+      font-size: 13px;
+  }
   .gallery_img{
     height: 66px;
     width: 112px;
@@ -2105,6 +2135,20 @@ q.review-content {
     li{
       margin-top: 15px;
     }
+  }
+  footer{
+  .wrap{ 
+    .footer-menu{ 
+    ul{
+      padding-bottom: 20px; 
+      span{
+    ul.submenu {
+    text-align: center;
+  }
+}
+}
+}
+}
   }
   .split_image{
     height:500px;

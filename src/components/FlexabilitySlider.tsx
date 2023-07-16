@@ -71,7 +71,6 @@ const FlexabilitySlider = (props: MyProps) => {
                           }}>
                         <Image
                           src={slide?.sliderImage?.sourceUrl}
-                          
                           width={390}
                           height={500}
                           style={{width:"100%",height:"100%"}}
@@ -89,7 +88,7 @@ const FlexabilitySlider = (props: MyProps) => {
                               <p className="sliderSubtitle">
                                 {slide?.sliderSubtitle}
                               </p>
-                              <p>{slide?.sliderDescription}</p>
+                              <p className="sliderDescription">{slide?.sliderDescription}</p>
                             </div>
                           </Col>
                         </Row>

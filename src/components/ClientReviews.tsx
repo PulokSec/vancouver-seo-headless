@@ -79,9 +79,9 @@ const ClientReviews = (props: MyProps) => {
       {reviews?.testimonials?.length > 1 && (
         <Container className="review">
           <h1 className="my-5 text-center">
-            {reviews?.bannerTitle?.split(" ")?.[0]}{" "}
+            {reviews?.bannerTitle?.split(" ")?.[0]} {reviews?.bannerTitle?.split(" ")?.[1]} {" "}
             <span style={{ color: "#f0b254" }}>
-              {reviews?.bannerTitle?.split(" ")?.[1]}
+              {reviews?.bannerTitle?.split(" ")?.[2]}
             </span>
           </h1>
           <Carousel
@@ -98,8 +98,8 @@ const ClientReviews = (props: MyProps) => {
                   <div className="card-body">
                     <div>
                       <q className="review-content">
-                        {review?.testimonial?.length > 200
-                          ? review?.testimonial?.slice(0, 200) + "..."
+                        {review?.testimonial?.length > 150
+                          ? review?.testimonial?.slice(0, 150) + "..."
                           : review?.testimonial}
                       </q>
                     </div>

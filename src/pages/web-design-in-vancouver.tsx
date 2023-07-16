@@ -360,7 +360,7 @@ const Webdesign = (props: MyProps) => {
                   <Row className="renovation-row">
                     <Tabs
                       id="controlled-tab-example"
-                      activeKey={key == null ? 1 : key}
+                      activeKey={key == null ? 0 : key}
                       onSelect={(k) => setKey(k)}
                       className="mb-3 renovation"
                     >

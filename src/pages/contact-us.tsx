@@ -310,6 +310,7 @@ const Contact = (props: MyProps) => {
                                   Google My Business
                                 </option>
                                 <option value="Other">Graphic Design</option>
+                                <option value="Other">SEO</option>
                               </select>
                             </div>
 
