@@ -61,6 +61,8 @@ export async function getStaticProps() {
               firstApplyStepTitle
               brokerTitle
               brokerDescription
+              topBrokerTitle
+              topBrokerDescription
               bannerTitle
               bannerHeading
               bannerDescription
@@ -252,6 +254,16 @@ const PPCManagement = (props: MyProps) => {
                       priority={true}
                       style={{width:"100%",height:"100%"}}
                     />
+                  </Col>
+                </Row>
+                <Row className="top-broker">
+                  <Col>
+                    <h2>{data?.PPCManagement?.topBrokerTitle}</h2>
+                    <div
+                              dangerouslySetInnerHTML={{
+                                __html: data?.PPCManagement?.topBrokerDescription,
+                              }}
+                            ></div>
                   </Col>
                 </Row>
                 {data?.PPCManagement?.slider == null ? (

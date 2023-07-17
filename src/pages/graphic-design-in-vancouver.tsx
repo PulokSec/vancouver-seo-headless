@@ -61,6 +61,8 @@ export async function getStaticProps() {
               firstApplyStepTitle
               brokerTitle
               brokerDescription
+              topBrokerTitle
+              topBrokerDescription
               bannerTitle
               bannerHeading
               bannerDescription
@@ -251,6 +253,16 @@ const GDesign = (props: MyProps) => {
                       priority={true}
                       style={{width:"100%",height:"100%"}}
                     />
+                  </Col>
+                </Row>
+                <Row className="top-broker">
+                  <Col>
+                    <h2>{data?.GDesign?.topBrokerTitle}</h2>
+                    <div
+                              dangerouslySetInnerHTML={{
+                                __html: data?.GDesign?.topBrokerDescription,
+                              }}
+                            ></div>
                   </Col>
                 </Row>
                 {data?.GDesign?.slider == null ? (
