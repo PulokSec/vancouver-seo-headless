@@ -272,7 +272,7 @@ const Services = (props: MyProps) => {
                           </Col>
                           <Col className="service-texts" lg={6}>
                             <div className="service-content">
-                              <h2 className="mt-4">{service?.serviceTitle}</h2>
+                              <h3 className="mt-4">{service?.serviceTitle}</h3>
                               <div
                                 className="service-desc"
                                 dangerouslySetInnerHTML={{
