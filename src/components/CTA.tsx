@@ -5,10 +5,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 import { Button, Container } from "react-bootstrap";
-
-const CTA = () => {
+type MyProps = {
+  ctaImage: any;
+};
+const CTA = (props: MyProps) => {
   const [catSections, setCatSections] = useState([]);
-
+  const { ctaImage } = props;
   useEffect(() => {
     client
       .query({
@@ -36,23 +38,17 @@ const CTA = () => {
       })
       .then((result) => setCatSections(result?.data?.pages?.nodes));
   }, []);
-  const myLoader = ({ src, width, quality }) => {
-    return `${src}?w=${width}&q=${quality || 75}`;
-  };
 
   return (
     <>
-      {catSections.map((cat, index) => {
+      {catSections?.map((cat, index) => {
         return (
           <Container key={index}>
             <Head>
               <link
                 rel="preload"
                 as="image"
-                href={
-                  cat?.HomeLandingPage?.callToActionSection
-                    ?.actionBackgroundImage?.sourceUrl
-                }
+                href={ctaImage}
               />
             </Head>
             {cat?.HomeLandingPage?.callToActionSection?.hideSection == true ? (
@@ -76,10 +72,8 @@ const CTA = () => {
                   <div
                   >
                     <Image
-                      src={
-                        cat?.HomeLandingPage?.callToActionSection
-                          ?.actionBackgroundImage?.sourceUrl
-                      }
+                      src={ctaImage ? ctaImage : cat?.HomeLandingPage?.callToActionSection
+                        ?.actionBackgroundImage?.sourceUrl}
                       
                       alt="Logo"          
                       width={390}

@@ -67,6 +67,10 @@ export async function getStaticProps() {
               bannerHeading
               bannerDescription
               aboutText
+              ctaImage {
+                altText
+                sourceUrl
+              }
               aboutImage {
                 altText
                 sourceUrl
@@ -179,10 +183,6 @@ const PPCManagement = (props: MyProps) => {
   const { settings, mainMenus, ppcManagementData, metaData } = props;
   // const [datas, setDatas] = useState([]);
   const [key, setKey] = useState(null);
-
-  const myLoader = ({ src, width, quality }) => {
-    return `${src}?w=${width}&q=${quality || 75}`;
-  };
 
   return (
     <>
@@ -414,7 +414,7 @@ const PPCManagement = (props: MyProps) => {
                   </Col>
                 </Row>
               </Container>
-              <CTA />
+              <CTA ctaImage={data?.PPCManagement?.ctaImage?.sourceUrl} />
             </main>
             <Footer settings={settings} mainMenus={mainMenus} />
           </div>

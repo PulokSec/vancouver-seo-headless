@@ -67,6 +67,10 @@ export async function getStaticProps() {
               bannerHeading
               bannerDescription
               aboutText
+              ctaImage {
+                altText
+                sourceUrl
+              }
               aboutImage {
                 altText
                 sourceUrl
@@ -179,10 +183,6 @@ const SMMarketing = (props: MyProps) => {
   const { settings, mainMenus, sMMarketingData, metaData } = props;
 
   const [key, setKey] = useState(null);
-
-  const myLoader = ({ src, width, quality }) => {
-    return `${src}?w=${width}&q=${quality || 75}`;
-  };
 
   return (
     <>
@@ -414,7 +414,7 @@ const SMMarketing = (props: MyProps) => {
                   </Col>
                 </Row>
               </Container>
-              <CTA />
+              <CTA ctaImage={data?.SMMarketing?.ctaImage?.sourceUrl} />
             </main>
             <Footer settings={settings} mainMenus={mainMenus} />
           </div>

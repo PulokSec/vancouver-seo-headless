@@ -67,6 +67,10 @@ export async function getStaticProps() {
               bannerHeading
               bannerDescription
               aboutText
+              ctaImage {
+                altText
+                sourceUrl
+              }
               aboutImage {
                 altText
                 sourceUrl
@@ -181,9 +185,6 @@ const GoogleMyBusiness = (props: MyProps) => {
 
   const [key, setKey] = useState(null);
 
-  const myLoader = ({ src, width, quality }) => {
-    return `${src}?w=${width}&q=${quality || 75}`;
-  };
 
   return (
     <>
@@ -419,7 +420,7 @@ const GoogleMyBusiness = (props: MyProps) => {
                   </Col>
                 </Row>
               </Container>
-              <CTA />
+              <CTA ctaImage={data?.GoogleMyBusiness?.ctaImage?.sourceUrl}/>
             </main>
             <Footer settings={settings} mainMenus={mainMenus} />
           </div>

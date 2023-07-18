@@ -67,6 +67,10 @@ export async function getStaticProps() {
               bannerHeading
               bannerDescription
               aboutText
+              ctaImage {
+                altText
+                sourceUrl
+              }
               aboutImage {
                 altText
                 sourceUrl
@@ -179,11 +183,6 @@ const Webdesign = (props: MyProps) => {
   const { settings, mainMenus, webdesignData, metaData } = props;
 
   const [key, setKey] = useState(null);
-
-  const myLoader = ({ src, width, quality }) => {
-    return `${src}?w=${width}&q=${quality || 75}`;
-  };
-
   return (
     <>
       {webdesignData.map((data:any, index:any) => {
@@ -411,7 +410,7 @@ const Webdesign = (props: MyProps) => {
                   </Col>
                 </Row>
               </Container>
-              <CTA />
+              <CTA ctaImage={data?.Webdesign?.ctaImage?.sourceUrl}/>
             </main>
             <Footer settings={settings} mainMenus={mainMenus} />
           </div>

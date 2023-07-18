@@ -33,6 +33,10 @@ export async function getStaticProps() {
               serviceBannerImage {
                 sourceUrl
               }
+              ctaImage {
+                  altText
+                  sourceUrl
+                }
               serviceBannerDescription
               refinancingTitle
               refinancingDescription
@@ -153,9 +157,6 @@ const responsive = {
 const Services = (props: MyProps) => {
   const { settings, mainMenus, servicesData, metaData } = props;
 
-  const myLoader = ({ src, width, quality }) => {
-    return `${src}?w=${width}&q=${quality || 75}`;
-  };
 
   return (
     <>
@@ -286,7 +287,7 @@ const Services = (props: MyProps) => {
                   );
                 })}
               </div>
-              <CTA />
+              <CTA ctaImage={data?.services?.ctaImage?.sourceUrl} />
             </main>
             <Footer settings={settings} mainMenus={mainMenus} />
           </div>

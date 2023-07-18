@@ -317,6 +317,7 @@ type MyProps = {
   images: any;
   faqsections: any;
   reviewsData: any;
+  cta_image:any;
 };
 
 export default function Page(props: MyProps) {
@@ -336,6 +337,7 @@ export default function Page(props: MyProps) {
     images,
     faqsections,
     reviewsData,
+    cta_image
   } = props;
   console.log(reviewsData);
   return (
@@ -385,7 +387,7 @@ export default function Page(props: MyProps) {
         <Gallery images={images} />
         <ClientReviews reviews={reviewsData} />
         <FAQ faqsections={faqsections} />
-        <CTA />
+        <CTA ctaImage={cta_image}/>
       </main>
 
       <Footer settings={settings} mainMenus={mainMenus} />
