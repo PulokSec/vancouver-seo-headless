@@ -260,7 +260,6 @@ const Services = (props: MyProps) => {
                           <Col className="service-texts" lg={6}>
                             <div className="service-image">
                               <Image
-                                
                                 src={service?.serviceImage?.sourceUrl}
                                 alt={service?.serviceImage?.altText}
                                 width={390}
@@ -272,7 +271,11 @@ const Services = (props: MyProps) => {
                           </Col>
                           <Col className="service-texts" lg={6}>
                             <div className="service-content">
-                              <h3 className="mt-4">{service?.serviceTitle}</h3>
+                              {(key == 4) || (key == 5) ? (
+                                <h2 className="mt-4">{service?.serviceTitle}</h2>
+                              ):(
+                                <h3 className="mt-4">{service?.serviceTitle}</h3>
+                              )}
                               <div
                                 className="service-desc"
                                 dangerouslySetInnerHTML={{
