@@ -104,7 +104,7 @@ const Gallery = (props: MyProps) => {
                         className="gallery_img"
                         height="252"
                         width="380"
-                        style={{width:"100%"}}
+                        style={{width:"100%",height:"100%"}}
                       />
                     )}
                   </Col>

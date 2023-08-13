@@ -253,12 +253,10 @@ body {
   .wehelp_text {
     p.wehelp_title {
       font-family: "AvenirBook";
-      font-size: 80px;
+      font-size: 50px;
       position: relative;
-      left: -90px;
       :after {
         position: absolute;
-        top: 26%;
         overflow: hidden;
         width: 60%;
         height: 3px;
@@ -316,7 +314,7 @@ body {
   padding: 80px 0;
   h2 {
     font-family: "AvenirBook";
-    font-size: 70px;
+    font-size: 50px;
     color: $color-black;
     position: relative;
     :after {
@@ -342,7 +340,7 @@ body {
   .split_text {
     h3 {
       font-family: "AvenirBook";
-      font-size: 70px;
+      font-size: 50px;
       color: $color-black;
       position: relative;
       span {
@@ -367,7 +365,6 @@ body {
         background: transparent;
         border: 2px solid $color-secondary;
         color: $color-black;
-        opacity: 0.5;
       }
     }
   }
@@ -770,6 +767,7 @@ footer {
 }
 
 .partnerLogo {
+  margin-bottom: 80px;
   .react-multiple-carousel__arrow {
     background-color: transparent;
     &:before {
@@ -1676,6 +1674,9 @@ p.testimonials-name {
   box-shadow: -1px -3px 12px -5px #000;
 }
 .review {
+  h1{
+    font-size: 50px;
+  }
   .react-multiple-carousel__arrow {
     background-color: transparent;
     &:before {
