@@ -991,6 +991,13 @@ textarea#comment {
     display: -webkit-box;
     -webkit-line-clamp: 6;
     -webkit-box-orient: vertical;
+    .row{
+      .col{
+        .card{
+          box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        }
+      }
+    }
   }
 
   .readMoreBtn {
@@ -1695,7 +1702,7 @@ p.testimonials-name {
 }
 .testimonial-box {
   height: 100%!important;
-  box-shadow: -1px -3px 12px -5px #000;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .review {
   margin-top: 80px;
@@ -1755,7 +1762,7 @@ q.review-content {
   margin-left: 25px;
   height: 220px!important;
   width: 380px !important;
-  box-shadow: -1px -3px 4px -5px #000;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .review-text{
   text-align: center;
