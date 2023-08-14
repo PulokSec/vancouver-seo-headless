@@ -224,14 +224,14 @@ const PPCManagement = (props: MyProps) => {
 
               <Container className="my-5">
                 <Row className="refinance-text my-5">
-                  <Col md={5}>
+                  {/* <Col md={5}>
                     <p>
                       {data?.PPCManagement?.bannerTitle?.split(" ")[0]}{" "}
                       <span>
                         {data?.PPCManagement?.bannerTitle?.split(" ")[1]}
                       </span>
                     </p>
-                  </Col>
+                  </Col> */}
                   <Col md={7}>
                     <span>{data?.PPCManagement?.bannerDescription}</span>
                   </Col>
@@ -329,7 +329,7 @@ const PPCManagement = (props: MyProps) => {
                     ) : (
                       <div className="apply">
                         <span>01</span>
-                        <p>{data?.PPCManagement?.firstApplyStepTitle}</p>
+                        <Link href="/contact-us"><p>{data?.PPCManagement?.firstApplyStepTitle}</p></Link>
                         <div className="apply-border"></div>
                       </div>
                     )}
@@ -340,11 +340,9 @@ const PPCManagement = (props: MyProps) => {
                     ) : (
                       <div className="approved">
                         <span>02</span>
-                        <p>
-                          <span>
-                            {data?.PPCManagement?.secondApplyStepTitle}
-                          </span>
-                        </p>
+                        <Link href="/contact-us"><p>
+                          <span>{data?.PPCManagement?.secondApplyStepTitle}</span>
+                        </p></Link>
                         <p>{data?.PPCManagement?.secondApplyStepDescription}</p>
                       </div>
                     )}
@@ -355,7 +353,7 @@ const PPCManagement = (props: MyProps) => {
                     ) : (
                       <div className="apply">
                         <span>03</span>
-                        <p>{data?.PPCManagement?.thirdApplyStepTitle}</p>
+                        <Link href="/contact-us"><p>{data?.PPCManagement?.thirdApplyStepTitle}</p></Link>
                         <div className="apply-border"></div>
                       </div>
                     )}

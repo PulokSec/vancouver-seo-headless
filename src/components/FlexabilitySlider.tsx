@@ -88,7 +88,7 @@ const FlexabilitySlider = (props: MyProps) => {
                               <p className="sliderSubtitle">
                                 {slide?.sliderSubtitle}
                               </p>
-                              <p className="sliderDescription">{slide?.sliderDescription}</p>
+                              {/* <p className="sliderDescription">{slide?.sliderDescription}</p> */}
                             </div>
                           </Col>
                         </Row>

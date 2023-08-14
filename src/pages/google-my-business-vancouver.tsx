@@ -227,7 +227,7 @@ const GoogleMyBusiness = (props: MyProps) => {
 
               <Container className="my-5">
                 <Row className="refinance-text my-5">
-                  <Col md={5}>
+                  {/* <Col md={5}>
                     <p>
                       {data?.GoogleMyBusiness?.bannerTitle?.split(" ")[0]}{" "}
                       <span>
@@ -235,7 +235,7 @@ const GoogleMyBusiness = (props: MyProps) => {
                         {data?.GoogleMyBusiness?.bannerTitle?.split(" ")[2]}
                       </span>
                     </p>
-                  </Col>
+                  </Col> */}
                   <Col md={7}>
                     <span>{data?.GoogleMyBusiness?.bannerDescription}</span>
                   </Col>
@@ -333,7 +333,7 @@ const GoogleMyBusiness = (props: MyProps) => {
                     ) : (
                       <div className="apply">
                         <span>01</span>
-                        <p>{data?.GoogleMyBusiness?.firstApplyStepTitle}</p>
+                        <Link href="/contact-us"><p>{data?.GoogleMyBusiness?.firstApplyStepTitle}</p></Link>
                         <div className="apply-border"></div>
                       </div>
                     )}
@@ -344,14 +344,10 @@ const GoogleMyBusiness = (props: MyProps) => {
                     ) : (
                       <div className="approved">
                         <span>02</span>
-                        <p>
-                          <span>
-                            {data?.GoogleMyBusiness?.secondApplyStepTitle}
-                          </span>
-                        </p>
-                        <p>
-                          {data?.GoogleMyBusiness?.secondApplyStepDescription}
-                        </p>
+                        <Link href="/contact-us"><p>
+                          <span>{data?.GoogleMyBusiness?.secondApplyStepTitle}</span>
+                        </p></Link>
+                        <p>{data?.GoogleMyBusiness?.secondApplyStepDescription}</p>
                       </div>
                     )}
                   </Col>
@@ -361,7 +357,7 @@ const GoogleMyBusiness = (props: MyProps) => {
                     ) : (
                       <div className="apply">
                         <span>03</span>
-                        <p>{data?.GoogleMyBusiness?.thirdApplyStepTitle}</p>
+                        <Link href="/contact-us"><p>{data?.GoogleMyBusiness?.thirdApplyStepTitle}</p></Link>
                         <div className="apply-border"></div>
                       </div>
                     )}

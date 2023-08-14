@@ -226,12 +226,12 @@ const GDesign = (props: MyProps) => {
 
               <Container className="my-5">
                 <Row className="refinance-text my-5">
-                  <Col md={5}>
+                  {/* <Col md={5}>
                     <p>
                       {data?.GDesign?.bannerTitle?.split(" ")[0]}{" "}
                       <span>{data?.GDesign?.bannerTitle?.split(" ")[1]}</span>
                     </p>
-                  </Col>
+                  </Col> */}
                   <Col md={7}>
                     <span>{data?.GDesign?.bannerDescription}</span>
                   </Col>
@@ -329,7 +329,7 @@ const GDesign = (props: MyProps) => {
                     ) : (
                       <div className="apply">
                         <span>01</span>
-                        <p>{data?.GDesign?.firstApplyStepTitle}</p>
+                        <Link href="/contact-us"><p>{data?.GDesign?.firstApplyStepTitle}</p></Link>
                         <div className="apply-border"></div>
                       </div>
                     )}
@@ -340,9 +340,9 @@ const GDesign = (props: MyProps) => {
                     ) : (
                       <div className="approved">
                         <span>02</span>
-                        <p>
+                        <Link href="/contact-us"><p>
                           <span>{data?.GDesign?.secondApplyStepTitle}</span>
-                        </p>
+                        </p></Link>
                         <p>{data?.GDesign?.secondApplyStepDescription}</p>
                       </div>
                     )}
@@ -353,7 +353,7 @@ const GDesign = (props: MyProps) => {
                     ) : (
                       <div className="apply">
                         <span>03</span>
-                        <p>{data?.GDesign?.thirdApplyStepTitle}</p>
+                        <Link href="/contact-us"><p>{data?.GDesign?.thirdApplyStepTitle}</p></Link>
                         <div className="apply-border"></div>
                       </div>
                     )}

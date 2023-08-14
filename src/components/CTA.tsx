@@ -99,10 +99,10 @@ const CTA = (props: MyProps) => {
                       }
                     >
                       <Button className="ctaBtn">
-                        {
+                        <span>{
                           cat?.HomeLandingPage?.callToActionSection?.actionLink
                             ?.title
-                        }
+                        }</span>
                       </Button>
                     </Link>
                   )}

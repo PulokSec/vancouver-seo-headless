@@ -212,7 +212,7 @@ const SMMarketing = (props: MyProps) => {
             <Header settings={settings} mainMenus={mainMenus} />
 
             <main className="content">
-              {data?.SMMarketing?.bannerTitle == null ? (
+              {/* {data?.SMMarketing?.bannerTitle == null ? (
                 ""
               ) : (
                 <Hero
@@ -221,7 +221,7 @@ const SMMarketing = (props: MyProps) => {
                   description={data?.SMMarketing?.bannerDescription}
                   bgImage={data?.SMMarketing?.bannerImage?.sourceUrl}
                 />
-              )}
+              )} */}
 
               <Container className="my-5">
                 <Row className="refinance-text my-5">
@@ -331,7 +331,7 @@ const SMMarketing = (props: MyProps) => {
                     ) : (
                       <div className="apply">
                         <span>01</span>
-                        <p>{data?.SMMarketing?.firstApplyStepTitle}</p>
+                        <Link href="/contact-us"><p>{data?.SMMarketing?.firstApplyStepTitle}</p></Link>
                         <div className="apply-border"></div>
                       </div>
                     )}
@@ -342,9 +342,9 @@ const SMMarketing = (props: MyProps) => {
                     ) : (
                       <div className="approved">
                         <span>02</span>
-                        <p>
+                        <Link href="/contact-us"><p>
                           <span>{data?.SMMarketing?.secondApplyStepTitle}</span>
-                        </p>
+                        </p></Link>
                         <p>{data?.SMMarketing?.secondApplyStepDescription}</p>
                       </div>
                     )}
@@ -355,7 +355,7 @@ const SMMarketing = (props: MyProps) => {
                     ) : (
                       <div className="apply">
                         <span>03</span>
-                        <p>{data?.SMMarketing?.thirdApplyStepTitle}</p>
+                        <Link href="/contact-us"><p>{data?.SMMarketing?.thirdApplyStepTitle}</p></Link>
                         <div className="apply-border"></div>
                       </div>
                     )}

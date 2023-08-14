@@ -224,12 +224,12 @@ const Webdesign = (props: MyProps) => {
 
               <Container className="my-5">
                 <Row className="refinance-text my-5">
-                  <Col md={5}>
+                  {/* <Col md={5}>
                     <p>
                       {data?.Webdesign?.bannerTitle?.split(" ")[0]}{" "}
                       <span>{data?.Webdesign?.bannerTitle?.split(" ")[1]}</span>
                     </p>
-                  </Col>
+                  </Col> */}
                   <Col md={7}>
                     <span>{data?.Webdesign?.bannerDescription}</span>
                   </Col>
@@ -327,7 +327,7 @@ const Webdesign = (props: MyProps) => {
                     ) : (
                       <div className="apply">
                         <span>01</span>
-                        <p>{data?.Webdesign?.firstApplyStepTitle}</p>
+                        <Link href="/contact-us"><p>{data?.Webdesign?.firstApplyStepTitle}</p></Link>
                         <div className="apply-border"></div>
                       </div>
                     )}
@@ -338,9 +338,9 @@ const Webdesign = (props: MyProps) => {
                     ) : (
                       <div className="approved">
                         <span>02</span>
-                        <p>
+                        <Link href="/contact-us"><p>
                           <span>{data?.Webdesign?.secondApplyStepTitle}</span>
-                        </p>
+                        </p></Link>
                         <p>{data?.Webdesign?.secondApplyStepDescription}</p>
                       </div>
                     )}
@@ -351,7 +351,7 @@ const Webdesign = (props: MyProps) => {
                     ) : (
                       <div className="apply">
                         <span>03</span>
-                        <p>{data?.Webdesign?.thirdApplyStepTitle}</p>
+                        <Link href="/contact-us"><p>{data?.Webdesign?.thirdApplyStepTitle}</p></Link>
                         <div className="apply-border"></div>
                       </div>
                     )}
